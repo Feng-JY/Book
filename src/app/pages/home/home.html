@@ -1,0 +1,26 @@
+<md-sidenav-layout [class.m2app-dark]="isDarkTheme">
+
+    <md-sidenav #sidenav mode="side" class="app-sidenav">
+        <lf-nav-menu>
+            <sub-nav-menu title="关于" routerLink="/home/about" routerLinkActive="nav-menu-selected"></sub-nav-menu>
+            <sub-nav-menu title="一级菜单">
+                <sub-nav-menu title="二级菜单">
+                    <sub-nav-menu title="三级菜单">
+                        <nav-menu-item routerLink="/index/navMenu/nav" routerLinkActive="nav-item-selected">四级菜单</nav-menu-item>
+                    </sub-nav-menu>
+                </sub-nav-menu>
+            </sub-nav-menu>
+            <sub-nav-menu title="JavaScript">
+                <nav-menu-item>原型</nav-menu-item>
+            </sub-nav-menu>
+        </lf-nav-menu>
+    </md-sidenav>
+    <md-toolbar color="primary">
+        <button class="app-icon-button" (click)="sidenav.toggle()">
+            <i class="material-icons app-toolbar-menu">menu</i> 
+            </button> Book 文档记录
+    </md-toolbar>
+    <div class="app-content">
+        <router-outlet></router-outlet>
+    </div>
+</md-sidenav-layout>
