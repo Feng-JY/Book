@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.scss']
 })
 export class Home {
-  isDarkTheme: boolean = false; 
+  isDarkTheme: boolean = false;
+
+  isShowBackTop() {
+    return true; 
+  }
+
+  backTop() {
+    window.scrollTo(0, 0);
+  }
 }

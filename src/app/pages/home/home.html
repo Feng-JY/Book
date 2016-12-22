@@ -24,3 +24,7 @@
         <router-outlet></router-outlet>
     </div>
 </md-sidenav-layout>
+
+<span class="app-action" *ngIf="isShowBackTop()"> 
+  <button md-fab (click)="backTop"><md-icon>check circle</md-icon></button>
+</span>
