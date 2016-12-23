@@ -4,4 +4,5 @@ import { Component } from '@angular/core';
   templateUrl: './about.html',
   styleUrls: ['./about.scss']
 })
-export class About {}
+export class About {
+}

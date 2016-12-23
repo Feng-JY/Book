@@ -11,7 +11,7 @@ import { Float } from './float/float';
 const PAGES = [ Home, About, Prototype, Float ]; 
 
 @NgModule({
-  imports: [routing, CommonModule, MaterialModule.forRoot(), LibModule],  
+  imports: [routing, CommonModule.forRoot(), MaterialModule.forRoot(), LibModule],  
   declarations: [...PAGES],
 }) 
 export class PagesModule {
