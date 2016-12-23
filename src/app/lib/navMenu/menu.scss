@@ -71,8 +71,8 @@ lf-nav-menu {
                 padding-left: 44px;
             }
             .nav-item-selected .nav-menu-item {
-                color: $primary-color;
-                background-color: mix(#ffffff, $primary-color, 90%);
+                background-color: $primary-color;
+                color: #fff;
             }
             .sub-nav-menu-title {
                 padding-left: 44px;

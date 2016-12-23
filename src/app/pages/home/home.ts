@@ -1,19 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, ViewEncapsulation } from '@angular/core';
 
 
 @Component({
-  selector: 'home',
+  selector: 'book-home', 
   templateUrl: './home.html',
-  styleUrls: ['./home.scss']
+  styleUrls: ['./home.scss'], 
 })
 export class Home {
-  isDarkTheme: boolean = false;
 
-  isShowBackTop() {
-    return true; 
-  }
-
-  backTop() {
-    window.scrollTo(0, 0);
-  }
 }

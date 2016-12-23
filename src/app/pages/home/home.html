@@ -1,17 +1,12 @@
-<md-sidenav-layout [class.m2app-dark]="isDarkTheme">
-
+<md-sidenav-layout>
     <md-sidenav #sidenav mode="side" class="app-sidenav">
         <lf-nav-menu>
             <sub-nav-menu title="关于" routerLink="/home/about" routerLinkActive="nav-menu-selected"></sub-nav-menu>
-            <sub-nav-menu title="一级菜单">
-                <sub-nav-menu title="二级菜单">
-                    <sub-nav-menu title="三级菜单">
-                        <nav-menu-item routerLink="/index/navMenu/nav" routerLinkActive="nav-item-selected">四级菜单</nav-menu-item>
-                    </sub-nav-menu>
-                </sub-nav-menu>
+            <sub-nav-menu title="CSS">
+                <nav-menu-item routerLink="/home/float" routerLinkActive="nav-item-selected">Float布局</nav-menu-item>
             </sub-nav-menu>
             <sub-nav-menu title="JavaScript">
-                <nav-menu-item>原型</nav-menu-item>
+                <nav-menu-item routerLink="/home/prototype" routerLinkActive="nav-item-selected">原型</nav-menu-item>
             </sub-nav-menu>
         </lf-nav-menu>
     </md-sidenav>
@@ -24,7 +19,6 @@
         <router-outlet></router-outlet>
     </div>
 </md-sidenav-layout>
-
-<span class="app-action" *ngIf="isShowBackTop()"> 
-  <button md-fab (click)="backTop"><md-icon>check circle</md-icon></button>
+<span class="app-action">    
+  <button md-fab ><md-icon>check circle</md-icon></button>
 </span>

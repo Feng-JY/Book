@@ -7,11 +7,14 @@
 
 .app-content {
     padding: 20px;
-    min-height: 1400px;
 }
 
 .app-content md-card {
     margin: 20px;
+}
+
+md-sidenav-layout {
+    height: 100%;
 }
 
 .app-sidenav {
