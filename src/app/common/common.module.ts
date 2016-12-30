@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
 import { MarkdownModule } from 'angular2-markdown';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 let COMMON_MODULES = [
   AngularCommonModule,
@@ -11,6 +12,7 @@ let COMMON_MODULES = [
   FormsModule,
   RouterModule,
   MarkdownModule,
+  FlexLayoutModule
 ]
 
 @NgModule({
@@ -25,11 +27,5 @@ let COMMON_MODULES = [
     COMMON_MODULES,
   ]
 })
-export class CommonModule {
-  static forRoot(): ModuleWithProviders {
-    return { 
-      ngModule: CommonModule,
-      providers: [] 
-    };
-  }
+export class CommonModule { 
 }

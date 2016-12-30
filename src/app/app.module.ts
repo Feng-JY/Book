@@ -7,6 +7,8 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PagesModule } from 'app/pages';
 import { CommonModule } from '@angular/common';
+import 'hammerjs';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -15,7 +17,7 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     FormsModule,
     CommonModule, 
-    PagesModule.forRoot(),  
+    PagesModule,    
     HttpModule,
     RouterModule.forRoot([],{useHash: true}),   
   ],
