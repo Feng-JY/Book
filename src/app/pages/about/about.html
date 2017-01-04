@@ -41,31 +41,33 @@
     <md-card-title>Form</md-card-title>
     <md-card-content>
         <div class="flex-container" fxLayout="row" fxLayoutWrap fxLayout.xs="column" fxLayoutAlign.xs="start center" fxLayoutAlign="start center">
-            <div class="flex-item" fxFlex="30" fxLayout="row" fxLayoutAlign="start center">
+            <div class="flex-item" fxFlex="30" fxLayout="row" fxLayoutAlign="start center" fxLayoutAlign.xs="start center">
                 <label for="" fxFlex="80px">姓名 :</label>
                 <div fxFlex>
                     <md-input placeholder="First name"></md-input>
                 </div>
             </div>
-            <div class="flex-item" fxFlex="70" fxLayout="row" fxLayoutAlign="start center">
+            <div class="flex-item" fxFlex="70" fxLayout="row" fxLayoutAlign="start center" fxLayoutAlign.xs="start center">
                 <label for="" fxFlex="80px">公司 :</label>
                 <div fxFlex>
                     <md-input placeholder="Company"></md-input>
                 </div>
             </div>
-            <div class="flex-item lable-p-10" fxLayout="row" fxFlex="100" fxLayoutAlign="start center">
+            <div class="flex-item lable-p-10" fxLayout="row" fxFlex="100" fxLayoutAlign="start center" fxLayoutAlign.xs="start center">
                 <label for="" fxFlex="80px">性别 :</label>
                 <md-radio-button name="symbol" [checked]="true" fxFlex="100px">男</md-radio-button>
                 <md-radio-button name="symbol" fxFlex="100px">女</md-radio-button>
             </div>
-            <div class="flex-item lable-p-10" fxLayout="row" fxFlex="100" fxLayoutAlign="start center">
+            <div class="flex-item lable-p-10" fxLayout="row" fxLayoutWrap fxFlex="100" fxLayoutAlign="start center" fxLayoutAlign.xs="start center">
                 <label for="" fxFlex="80px">爱好 :</label>
-                <md-checkbox [checked]="true" fxFlex="100px">篮球</md-checkbox>
-                <md-checkbox fxFlex="100px">足球</md-checkbox>
-                <md-checkbox fxFlex="100px">羽毛球</md-checkbox>
-                <md-checkbox fxFlex="100px">骑行</md-checkbox>
+                <div fxFlex fxLayoutWrap fxLayout="row" fxLayoutAlign="start center">
+                    <md-checkbox [checked]="true" fxFlex="100px">篮球</md-checkbox>
+                    <md-checkbox fxFlex="100px">足球</md-checkbox>
+                    <md-checkbox fxFlex="100px">羽毛球</md-checkbox>
+                    <md-checkbox fxFlex="100px">骑行</md-checkbox>
+                </div>
             </div>
-            <div class="flex-item lable-p-10" fxFlex="100" fxLayout="row" fxLayoutAlign="start center">
+            <div class="flex-item lable-p-10" fxFlex="100" fxLayout="row" fxLayoutAlign="start center" fxLayoutAlign.xs="start center">
                 <label for="" fxFlex="80px">职位 :</label>
                 <div fxFlex>
                     <md-select placeholder="您的职位是">
@@ -75,11 +77,17 @@
                     </md-select>
                 </div>
             </div>
-            <div class="flex-item lable-p-10" fxFlex="100" fxLayout="row" fxLayoutAlign="start center">
+            <div class="flex-item lable-p-10" fxFlex="100" fxLayout="row" fxLayoutAlign="start center" fxLayoutAlign.xs="start center">
                 <label for="" fxFlex="80px">工作年限 :</label>
-                <div fxFlex="60">
+                <div fxFlex>
                     <md-slider [max]="10" [min]="0" [thumb-label]="true" [tick-interval]="1" [value]="0">
                     </md-slider>
+                </div>
+            </div>
+            <div class="flex-item lable-p-10" fxLayout="row" fxFlex="100" fxLayoutAlign="start center" fxLayoutAlign.xs="start center">
+                <label for="" fxFlex="80px">邮件通知 :</label>
+                <div fxFlex>
+                    <md-slide-toggle [checked]="true"></md-slide-toggle>
                 </div>
             </div>
         </div>

@@ -1,5 +1,6 @@
 import { Component, HostListener, ViewEncapsulation } from '@angular/core';
 
+const SMALL_WIDTH_BREAKPOINT = 840;
 
 @Component({
   selector: 'book-home', 
@@ -8,4 +9,7 @@ import { Component, HostListener, ViewEncapsulation } from '@angular/core';
 })
 export class Home {
 
+  isScreenSmall(): boolean { 
+    return window.matchMedia(`(max-width: ${SMALL_WIDTH_BREAKPOINT}px)`).matches;
+  }
 }
