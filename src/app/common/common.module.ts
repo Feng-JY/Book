@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
 import { MarkdownModule } from 'angular2-markdown';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ChartsModule } from 'ng2-charts/ng2-charts';
 
 let COMMON_MODULES = [
   AngularCommonModule,
@@ -12,7 +13,8 @@ let COMMON_MODULES = [
   FormsModule,
   RouterModule,
   MarkdownModule,
-  FlexLayoutModule
+  FlexLayoutModule,
+  ChartsModule
 ]
 
 @NgModule({

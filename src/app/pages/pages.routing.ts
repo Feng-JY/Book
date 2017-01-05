@@ -4,6 +4,7 @@ import { Home } from './home/home';
 import { About } from './about/about';
 import { Prototype } from './prototype/prototype'
 import { Float } from './float/float';
+import { Chart } from './chart/chart';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home/about', pathMatch: 'full' },
@@ -13,7 +14,8 @@ const routes: Routes = [
     children: [
       { path: 'about', component: About },
       { path: 'prototype', component: Prototype },
-      { path: 'float', component: Float }
+      { path: 'float', component: Float },
+      { path: 'chart', component: Chart }
     ] 
   },
   { path: '**', redirectTo: 'home/about', pathMatch: 'full' },

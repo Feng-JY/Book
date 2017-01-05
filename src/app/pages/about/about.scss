@@ -19,3 +19,7 @@
 .flex-container {
     align-items: stretch!important;
 }
+
+md-card+md-card {
+    margin-top: 20px;
+}

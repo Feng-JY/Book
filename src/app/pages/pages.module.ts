@@ -8,8 +8,9 @@ import { About } from './about/about';
 import { Prototype } from './prototype/prototype'
 import { Float } from './float/float';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { Chart } from './chart/chart';
 
-const PAGES = [ Home, About, Prototype, Float ]; 
+const PAGES = [ Home, About, Prototype, Float, Chart ]; 
 
 @NgModule({
   imports: [routing, CommonModule, MaterialModule.forRoot(), LibModule, FlexLayoutModule.forRoot()],  

@@ -1,0 +1,15 @@
+<div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutAlign.xs="space-around center" fxLayoutWrap fxLayout.xs="column">
+    <md-card fxFlex="40" fxFlex.xs="80">
+        <md-card-subtitle>雷达图</md-card-subtitle>
+        <md-card-content>
+            <canvas baseChart [datasets]="radarChartData" [labels]="radarChartLabels" [chartType]="radarChartType"></canvas>
+        </md-card-content> 
+    </md-card>
+    <md-card fxFlex="40" fxFlex.xs="80">
+        <md-card-subtitle>饼图</md-card-subtitle>
+        <md-card-content>
+            <canvas baseChart [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType">
+            </canvas>
+        </md-card-content>
+    </md-card>
+</div>

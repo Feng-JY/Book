@@ -22,9 +22,6 @@ $primary: md-palette($md-deep-purple);
 $accent: md-palette($md-amber, A200, A100, A400);
 $theme: md-light-theme($primary, $accent);
 @include angular-material-theme($theme);
-md-card+md-card {
-    margin-top: 20px;
-}
 md-card-title i {
     float: right;
 }
