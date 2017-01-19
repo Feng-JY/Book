@@ -9,12 +9,14 @@ import { Prototype } from './prototype/prototype'
 import { Float } from './float/float';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { Chart } from './chart/chart';
+import { Learn, PortalComponent } from './learn'; 
 
-const PAGES = [ Home, About, Prototype, Float, Chart ]; 
+const PAGES = [ Home, About, Prototype, Float, Chart, Learn, PortalComponent ]; 
 
-@NgModule({
-  imports: [routing, CommonModule, MaterialModule.forRoot(), LibModule, FlexLayoutModule.forRoot()],  
+@NgModule({ 
+imports: [routing, CommonModule, LibModule, MaterialModule.forRoot(), FlexLayoutModule.forRoot() ],  
   declarations: [...PAGES],  
-}) 
+  entryComponents: [ PortalComponent ]     
+})  
 export class PagesModule {
 }
