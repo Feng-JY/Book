@@ -5,7 +5,8 @@ import { About } from './about/about';
 import { Prototype } from './prototype/prototype'
 import { Float } from './float/float';
 import { Chart } from './chart/chart';
-import { Learn } from './learn/learn'; 
+import { Learn } from './learn/learn';
+import{ Lodash } from './lodash/lodash'; 
 
 const routes: Routes = [
   { path: '', redirectTo: 'home/about', pathMatch: 'full' },
@@ -18,7 +19,8 @@ const routes: Routes = [
       { path: 'float', component: Float },
       { path: 'chart', component: Chart },
       { path: 'chart', component: Chart },
-      { path: 'learn', component: Learn }
+      { path: 'learn', component: Learn },
+      { path: 'lodash', component: Lodash }
     ]
   },
   { path: '**', redirectTo: 'home/about', pathMatch: 'full' },

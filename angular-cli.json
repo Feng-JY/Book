@@ -21,7 +21,8 @@
             "../node_modules/github-markdown-css/github-markdown.css"
         ],
         "scripts": [
-            "../node_modules/chart.js/dist/Chart.min.js"
+            "../node_modules/chart.js/dist/Chart.min.js",
+            "../node_modules/lodash/lodash.min.js"
         ],
         "environments": {
             "source": "environments/environment.ts",
