@@ -16,3 +16,43 @@
         <button md-button (click)="compact()">执行compact</button>
     </md-card-actions>
 </md-card>
+<md-card>
+    <md-card-subtitle Markdown>`_.concat(array, [values])`</md-card-subtitle>
+    <md-card-content>
+        concat 合并数组 参数的值合并返回一个新的数组
+    </md-card-content>
+    <md-card-actions>
+        <button md-button (click)="concat()">concat</button>
+    </md-card-actions>
+</md-card>
+<md-card>
+    <md-card-subtitle Markdown>`difference`</md-card-subtitle>
+    <md-card-content Markdown>
+        `_.difference(array, [values])` 返回array中不在values中的值
+        
+        `_.differenceBy(array, [values], [iteratee=_.identity])` iteratee可以是string如对象数组中的属性作为比较依据,也可以是function会遍历array、values的每个值
+
+        `_.differenceWith(array, [values], [comparator])`  comparator比较器
+    </md-card-content>
+    <md-card-actions>
+        <button md-button (click)="difference()">difference</button>
+        <button md-button (click)="differenceBy()">differenceBy</button>
+        <button md-button (click)="differenceWith()">differenceWith</button>
+    </md-card-actions>
+</md-card>
+
+<md-card>
+    <md-card-subtitle Markdown>`drop`</md-card-subtitle>
+    <md-card-content Markdown>
+        `_.drop(array, [n=1])` 去掉数组中的一部分 返回新的数组，默认去掉第一个
+        
+        `_.dropRight(array, [n=1])` 从右边开始
+
+        `_.dropRightWhile(array, [predicate=_.identity])`  第二个参数为function 会遍历每个元素，去掉返回为true的元素
+
+        `_.dropWhile(array, [predicate=_.identity])`  同上，从左边开始
+    </md-card-content>
+    <md-card-actions>
+        <button md-button (click)="dropRightWhile()">dropRightWhile</button>
+    </md-card-actions>
+</md-card>
