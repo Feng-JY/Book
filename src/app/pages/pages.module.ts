@@ -11,8 +11,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { Chart } from './chart/chart';
 import { Learn, PortalComponent } from './learn'; 
 import { Lodash } from './lodash/lodash';
+import { Rxjs } from './rxjs/rxjs';
 
-const PAGES = [ Home, About, Prototype, Float, Chart, Learn, PortalComponent, Lodash ]; 
+const PAGES = [ Home, About, Prototype, Float, Chart, Learn, PortalComponent, Lodash, Rxjs ]; 
 
 @NgModule({ 
 imports: [routing, CommonModule, LibModule, MaterialModule.forRoot(), FlexLayoutModule.forRoot() ],  

@@ -6,7 +6,9 @@ import { Prototype } from './prototype/prototype'
 import { Float } from './float/float';
 import { Chart } from './chart/chart';
 import { Learn } from './learn/learn';
-import{ Lodash } from './lodash/lodash'; 
+import { Lodash } from './lodash/lodash'; 
+import { Rxjs }  from './rxjs/rxjs';
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'home/about', pathMatch: 'full' },
@@ -20,7 +22,8 @@ const routes: Routes = [
       { path: 'chart', component: Chart },
       { path: 'chart', component: Chart },
       { path: 'learn', component: Learn },
-      { path: 'lodash', component: Lodash }
+      { path: 'lodash', component: Lodash },
+      { path: 'rxjs', component: Rxjs }
     ]
   },
   { path: '**', redirectTo: 'home/about', pathMatch: 'full' },
