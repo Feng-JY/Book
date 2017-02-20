@@ -15,9 +15,9 @@ import { Rxjs } from './rxjs/rxjs';
 
 const PAGES = [ Home, About, Prototype, Float, Chart, Learn, PortalComponent, Lodash, Rxjs ]; 
 
-@NgModule({ 
-imports: [routing, CommonModule, LibModule, MaterialModule.forRoot(), FlexLayoutModule.forRoot() ],  
-  declarations: [...PAGES],  
+@NgModule({   
+  imports: [routing, CommonModule, LibModule, FlexLayoutModule, MaterialModule.forRoot()],    
+  declarations: [...PAGES],     
   entryComponents: [ PortalComponent ]     
 })  
 export class PagesModule {
