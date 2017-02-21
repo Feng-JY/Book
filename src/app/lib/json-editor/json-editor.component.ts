@@ -8,8 +8,6 @@ import {
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
-import JSONEditor from 'jsoneditor/dist/jsoneditor.js';
-
 /**
  * The JSON editor needs styling and some graphics
  * We read the raw css and svg files and replace any file reference to the svg with
