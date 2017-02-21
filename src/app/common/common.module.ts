@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router'; 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
-import { PortalDirective } from './directives'
+import { PortalDirective } from './directives';
 
 let COMMON_MODULES = [
   AngularCommonModule,

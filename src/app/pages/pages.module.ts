@@ -12,8 +12,9 @@ import { Chart } from './chart/chart';
 import { Learn, PortalComponent } from './learn'; 
 import { Lodash } from './lodash/lodash';
 import { Rxjs } from './rxjs/rxjs';
+import { Editor } from './editor/editor';
 
-const PAGES = [ Home, About, Prototype, Float, Chart, Learn, PortalComponent, Lodash, Rxjs ]; 
+const PAGES = [ Home, About, Prototype, Float, Chart, Learn, PortalComponent, Lodash, Rxjs, Editor ]; 
 
 @NgModule({   
   imports: [routing, CommonModule, LibModule, FlexLayoutModule, MaterialModule.forRoot()],    

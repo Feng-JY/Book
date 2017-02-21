@@ -6,12 +6,88 @@
     <title>Book</title>
     <!--<base href="/"> -->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        body {
+            background-color: #f3f3f4;
+            font-family: "Microsoft YaHei";
+            font-size: 13px;
+        }
+        
+        .circle-loader {
+            margin: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 60px;
+            height: 60px;
+        }
+        
+        .circle-outside {
+            background-color: rgba(0, 0, 0, 0);
+            border: 5px solid #673ab7;
+            opacity: .9;
+            border-right: 5px solid rgba(0, 0, 0, 0);
+            border-left: 5px solid rgba(0, 0, 0, 0);
+            border-radius: 50px;
+            box-shadow: 0 0 35px #673ab7;
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            -moz-animation: spinoffPulse 1s infinite ease-in-out;
+            -webkit-animation: spinoffPulse 1s infinite linear;
+            animation-direction: alternate;
+            -webkit-animation-direction: alternate;
+        }
+        
+        .circle-inner {
+            background-color: rgba(0, 0, 0, 0);
+            border: 5px solid #673ab7;
+            opacity: .9;
+            border-left: 5px solid rgba(0, 0, 0, 0);
+            border-right: 5px solid rgba(0, 0, 0, 0);
+            border-radius: 50px;
+            box-shadow: 0 0 15px #673ab7;
+            width: 30px;
+            height: 30px;
+            margin: 0 auto;
+            position: relative;
+            top: -49px;
+            -moz-animation: spinoffPulse .5s infinite linear;
+            -webkit-animation: spinoffPulse .5s infinite linear;
+        }
+        
+        @-moz-keyframes spinoffPulse {
+            0% {
+                -moz-transform: rotate(0deg);
+            }
+            100% {
+                -moz-transform: rotate(360deg);
+            }
+        }
+        
+        @-webkit-keyframes spinoffPulse {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <app-root>Loading...</app-root>
+    <app-root>
+        <div class="circle-loader">
+            <div class="circle-outside">
+            </div>
+            <div class="circle-inner"></div>
+        </div>
+    </app-root>
 </body>
 
 </html>

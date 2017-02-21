@@ -49,6 +49,7 @@ md-sidenav-layout {
     padding: 0;
     text-align: left;
     text-decoration: none;
+    margin-top: 5px;
     @include user-select(none);
     i {
         @include user-select(none);
