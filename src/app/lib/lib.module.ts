@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { LfNavMenuModule } from './navMenu';
 import { MarkdownModule } from './markdown';
 import { JsonEditorModule } from './json-editor';
+import { MonacoEditorModule } from './monaco-editor';
 
 const LIB_MODULE = [
   LfNavMenuModule,
   MarkdownModule,
-  JsonEditorModule
+  JsonEditorModule,
+  MonacoEditorModule
 ];
  
 @NgModule({

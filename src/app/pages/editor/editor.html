@@ -1,5 +1,11 @@
 <div>
     <md-card>
+        <md-card-subtitle>Monaco Editor</md-card-subtitle>
+        <md-card-content>
+            <monaco-editor class="height-250" [(ngModel)]="code" [language]="language" [options]="monaco_options"></monaco-editor>
+        </md-card-content>
+    </md-card>
+    <md-card>
         <md-card-subtitle>Json Editor</md-card-subtitle>
         <md-card-content>
             <json-editor [value]="editorValue"></json-editor>
