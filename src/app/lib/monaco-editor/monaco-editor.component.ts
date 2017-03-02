@@ -18,12 +18,11 @@ declare const require: any;
 })
 
 export class MonacoEditorComponent implements OnInit, AfterViewInit {
-
   @ViewChild('editor') editorContent: ElementRef;
   @Input() language: string;
   @Input() language_defaults: any = null;
   @Input() options: any = {};
-  @Input() set value(v:string) {
+  @Input() set value(v: string) {
     if (v !== this._value) {
       this._value = v;
       this.onChange(v);
@@ -34,18 +33,17 @@ export class MonacoEditorComponent implements OnInit, AfterViewInit {
 
   private _editor: any;
   private _value = '';
-  private _javascriptExtraLibs:any = null;
-  private _typescriptExtraLibs:any = null;
+  private _javascriptExtraLibs: any = null;
+  private _typescriptExtraLibs: any = null;
 
-  constructor() {}
+  constructor() { }
 
-  get value():string { return this._value; };
+  get value(): string { return this._value; };
 
   ngOnInit() {
   }
 
   ngAfterViewInit() {
-
     var onGotAmdLoader = () => {
       // Load monaco
       (<any>window).require.config({ paths: { 'vs': 'assets/monaco/vs' } });
@@ -53,17 +51,7 @@ export class MonacoEditorComponent implements OnInit, AfterViewInit {
         this.initMonaco();
       });
     };
-
-    // Load AMD loader if necessary
-    if (!(<any>window).require) {
-      var loaderScript = document.createElement('script');
-      loaderScript.type = 'text/javascript';
-      loaderScript.src = 'assets/monaco/vs/loader.js';
-      loaderScript.addEventListener('load', onGotAmdLoader);
-      document.body.appendChild(loaderScript);
-    } else {
-      onGotAmdLoader();
-    }
+    onGotAmdLoader();
   }
 
   /**
@@ -71,13 +59,11 @@ export class MonacoEditorComponent implements OnInit, AfterViewInit {
    */
   ngOnDestroy() {
     this._editor.dispose();
-    if(this._javascriptExtraLibs !== null)
-    {
+    if (this._javascriptExtraLibs !== null) {
       this._javascriptExtraLibs.dispose();
     }
 
-    if(this._typescriptExtraLibs !== null)
-    {
+    if (this._typescriptExtraLibs !== null) {
       this._typescriptExtraLibs.dispose();
     }
   }
@@ -93,27 +79,27 @@ export class MonacoEditorComponent implements OnInit, AfterViewInit {
 
     // Set language defaults
     // We already set the language on the component so we act accordingly
-    if(this.language_defaults !== null) {
+    if (this.language_defaults !== null) {
       switch (this.language) {
         case 'javascript':
           monaco.languages.typescript.javascriptDefaults.setCompilerOptions(
-              this.language_defaults.compilerOptions
+            this.language_defaults.compilerOptions
           );
           for (var extraLib in this.language_defaults.extraLibs) {
             this._javascriptExtraLibs = monaco.languages.typescript.javascriptDefaults.addExtraLib(
-                this.language_defaults.extraLibs[extraLib].definitions,
-                this.language_defaults.extraLibs[extraLib].definitions_name
+              this.language_defaults.extraLibs[extraLib].definitions,
+              this.language_defaults.extraLibs[extraLib].definitions_name
             );
           }
           break;
         case 'typescript':
           monaco.languages.typescript.typescriptDefaults.setCompilerOptions(
-              this.language_defaults.compilerOptions
+            this.language_defaults.compilerOptions
           );
           for (var extraLib in this.language_defaults.extraLibs) {
             this._typescriptExtraLibs = monaco.languages.typescript.typescriptDefaults.addExtraLib(
-                this.language_defaults.extraLibs[extraLib].definitions,
-                this.language_defaults.extraLibs[extraLib].definitions_name
+              this.language_defaults.extraLibs[extraLib].definitions,
+              this.language_defaults.extraLibs[extraLib].definitions_name
             );
           }
           break;
@@ -122,16 +108,14 @@ export class MonacoEditorComponent implements OnInit, AfterViewInit {
 
     // Currently setting this option prevents the autocomplete selection with the "Enter" key
     // TODO make sure to propagate the event to the autocomplete
-    if (this.options.customPreventCarriageReturn === true)
-    {
-      let preventCarriageReturn  = this._editor.addCommand(monaco.KeyCode.Enter, function() {
+    if (this.options.customPreventCarriageReturn === true) {
+      let preventCarriageReturn = this._editor.addCommand(monaco.KeyCode.Enter, function () {
         return false;
       });
     }
 
-    this._editor.getModel().onDidChangeContent( (e)=>
-    {
-      this.updateValue(this._editor.getModel().getValue());
+    this._editor.getModel().onDidChangeContent((e) => {
+      this.updateValue(this._editor.getModel().getValue());      
     });
   }
 
@@ -140,8 +124,7 @@ export class MonacoEditorComponent implements OnInit, AfterViewInit {
    *
    * @param value
    */
-  updateValue(value:string)
-  {
+  updateValue(value: string) {
     this.value = value;
     this.onChange(value);
     this.onTouched();
@@ -154,23 +137,20 @@ export class MonacoEditorComponent implements OnInit, AfterViewInit {
    *
    * @param value
    */
-  writeValue(value:string)
-  {
+  writeValue(value: string) {
     this._value = value || '';
-    if (this.instance)
-    {
+    if (this.instance) {
       this.instance.setValue(this._value);
     }
     // If an instance of Monaco editor is running, update its contents
-    if(this._editor)
-    {
+    if (this._editor) {
       this._editor.getModel().setValue(this._value);
     }
   }
 
-  onChange(_){}
-  onTouched(){}
-  registerOnChange(fn){this.onChange = fn;}
-  registerOnTouched(fn){this.onTouched = fn;}
+  onChange(_) { }
+  onTouched() { }
+  registerOnChange(fn) { this.onChange = fn; }
+  registerOnTouched(fn) { this.onTouched = fn; }
 
 }

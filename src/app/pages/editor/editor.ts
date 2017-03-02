@@ -29,15 +29,10 @@ export class Editor {
     renderLineHighlight: true,
     overviewRulerLanes: 0,
     theme: "vs-dark",
-    customPreventCarriageReturn: true,
-    scrollbar: {
-      vertical: 'hidden',
-      horizontal: 'auto',
-      useShadows: false
-    }
   }
 
-  ngAfterViewInit() {
+
+  ngOnInit() {
     this.code = `  
      /**
       * init data
